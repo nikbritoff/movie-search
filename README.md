@@ -1,4 +1,4 @@
-# Учебный проект "Movie Search"
+# Учебный проект ["Movie Search"](https://nikbritoff.github.io/movie-search/)
 
 Этот проект создан с целью изучения:
 - Классовые компоненты;
