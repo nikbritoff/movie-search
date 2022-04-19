@@ -125,20 +125,18 @@ class App extends React.Component {
       this.setState({
         needLoad: true,
       });
-      setTimeout(() => {
-        if (this.state.needLoad) {
-          this.setState({
-            needLoad: false,
-          });
-          onceFetch();
-        }
-      }, 300);
 
+      document.removeEventListener('scroll', this.handleDocumentScroll);
+      onceFetch();
     }
   }
 
   componentDidMount() {
     this.fetchMovies(START_MOVIE);
+    document.addEventListener('scroll', this.handleDocumentScroll);
+  }
+
+  componentDidUpdate() {
     document.addEventListener('scroll', this.handleDocumentScroll);
   }
   
